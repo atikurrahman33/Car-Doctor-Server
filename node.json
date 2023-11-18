@@ -1,0 +1,136 @@
+[
+    {
+        "name": "Homemade Lasagna",
+        "quantity": 2,
+        "location": "123 Main St, Anytown",
+        "expiration_date": "2023-11-15",
+        "food_image": "lasagna.jpg",
+        "donator_name": "John Doe",
+        "donator_image": "john.jpg",
+        "donator_email": "john@example.com",
+        "note": "Please enjoy this lasagna with your loved ones!"
+      },
+      {
+        "name": "Vegetarian Chili",
+        "quantity": 4,
+        "location": "456 Elm St, Another Town",
+        "expiration_date": "2023-11-17",
+        "food_image": "chili.jpg",
+        "donator_name": "Jane Smith",
+        "donator_image": "jane.jpg",
+        "donator_email": "jane@example.com",
+        "note": "Feel free to add some cheese and enjoy this chili!"
+      },
+      {
+        "name": "Chicken Stir-fry",
+        "quantity": 3,
+        "location": "789 Oak Ave, Somewhere City",
+        "expiration_date": "2023-11-14",
+        "food_image": "stirfry.jpg",
+        "donator_name": "Mike Johnson",
+        "donator_image": "mike.jpg",
+        "donator_email": "mike@example.com",
+        "note": "Add some soy sauce for extra flavor!"
+      },
+      {
+        "name": "Pasta Salad",
+        "quantity": 2,
+        "location": "101 Pine Rd, Yourtown",
+        "expiration_date": "2023-11-16",
+        "food_image": "pastasalad.jpg",
+        "donator_name": "Lisa Brown",
+        "donator_image": "lisa.jpg",
+        "donator_email": "lisa@example.com",
+        "note": "Great for picnics or as a side dish!"
+      },
+      {
+        "name": "Sushi Rolls",
+        "quantity": 5,
+        "location": "234 Cedar Ln, Theirtown",
+        "expiration_date": "2023-11-13",
+        "food_image": "sushi.jpg",
+        "donator_name": "David Wilson",
+        "donator_image": "david.jpg",
+        "donator_email": "david@example.com",
+        "note": "Wasabi and soy sauce included. Enjoy!"
+      },
+      {
+        "name": "Mushroom Risotto",
+        "quantity": 2,
+        "location": "567 Willow Dr, Nearbyville",
+        "expiration_date": "2023-11-18",
+        "food_image": "risotto.jpg",
+        "donator_name": "Sarah Lee",
+        "donator_image": "sarah.jpg",
+        "donator_email": "sarah@example.com",
+        "note": "Perfect for a cozy dinner at home."
+      },
+      {
+        "name": "Beef Tacos",
+        "quantity": 4,
+        "location": "890 Birch St, Faraway City",
+        "expiration_date": "2023-11-15",
+        "food_image": "tacos.jpg",
+        "donator_name": "Robert White",
+        "donator_image": "robert.jpg",
+        "donator_email": "robert@example.com",
+        "note": "Add guacamole for extra flavor!"
+      },
+      {
+        "name": "Vegan Quinoa Salad",
+        "quantity": 3,
+        "location": "123 Pinecone Ave, Elsewhere Town",
+        "expiration_date": "2023-11-17",
+        "food_image": "quinoasalad.jpg",
+        "donator_name": "Emily Green",
+        "donator_image": "emily.jpg",
+        "donator_email": "emily@example.com",
+        "note": "Healthy and refreshing!"
+      },
+      {
+        "name": "BBQ Ribs",
+        "quantity": 2,
+        "location": "456 Redwood St, Distant Village",
+        "expiration_date": "2023-11-16",
+        "food_image": "ribs.jpg",
+        "donator_name": "Michael Taylor",
+        "donator_image": "michael.jpg",
+        "donator_email": "michael@example.com",
+        "note": "Get your hands messy with these delicious ribs!"
+      },
+      {
+        "name": "Fruit Platter",
+        "quantity": 3,
+        "location": "789 Maple Ave, Remote Hamlet",
+        "expiration_date": "2023-11-14",
+        "food_image": "fruitplatter.jpg",
+        "donator_name": "Alicia Davis",
+        "donator_image": "alicia.jpg",
+        "donator_email": "alicia@example.com",
+        "note": "Healthy and perfect for snacking!"
+      },
+      {
+        "name": "Cheese Pizza",
+        "quantity": 2,
+        "location": "101 Cedar St, Outskirts Town",
+        "expiration_date": "2023-11-15",
+        "food_image": "pizza.jpg",
+        "donator_name": "Mark Anderson",
+        "donator_image": "mark.jpg",
+        "donator_email": "mark@example.com",
+        "note": "Great for a casual dinner!"
+      },
+      {
+        "name": "Chocolate Cake",
+        "quantity": 2,
+        "location": "234 Elmwood Rd, Secluded Haven",
+        "expiration_date": "2023-11-18",
+        "food_image": "chocolatecake.jpg",
+        "donator_name": "Laura Miller",
+        "donator_image": "laura.jpg",
+        "donator_email": "laura@example.com",
+        "note": "Indulge in this decadent chocolate cake!"
+      }
+      
+      
+]
