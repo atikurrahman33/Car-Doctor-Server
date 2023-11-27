@@ -3,10 +3,16 @@ const app = express()
 const { MongoClient, ServerApiVersion, ObjectId } = require('mongodb');
 require('dotenv').config()
 const cors = require('cors');
+const cookieParser =require('cookie-parser')
+const jwt = require('jsonwebtoken');
 const port = process.env.PORT || 5000
 
-app.use(cors());
+app.use(cors({
+  origin: 'http://localhost:5173',
+  credentials: true
+}));
 app.use(express.json());
+app.use(cookieParser())
 
 
 
@@ -21,6 +27,30 @@ const client = new MongoClient(uri, {
   }
 });
 
+
+// middleware
+
+const verifyToken =async(req,res,next)=>{
+  const token = req.cookies?.token;
+  console.log('value of token' , token)
+  if(!token){
+    return res.status(401).send({message: 'forbidden'})
+  }
+  jwt.verify(token, process.env.ACCESS_TOKEN , (error , decoded)=>{
+    // error
+    if(error){
+      console.log(error)
+      return res.status(401).send({message:'unauthorize'})
+    }
+    // if token is valid then decoded
+
+    console.log('value of the token' , decoded)
+    req.user= decoded
+    next()
+  })
+  
+}
+
 async function run() {
   try {
     // Connect the client to the server	(optional starting in v4.7)
@@ -29,7 +59,21 @@ async function run() {
     const serviceCollection = client.db("carDoctor").collection("services");
     const bookingCollection =client.db("carDoctor").collection("bookings");
 
+    // Auth related
 
+    app.post('/jwt', async (req, res) => {
+      const user = req.body;
+      const token = jwt.sign(user, process.env.ACCESS_TOKEN, { expiresIn: '1h' })
+      res
+        .cookie('token', token, {
+          httpOnly: true,
+          secure: false,
+        })
+        .send({ success: true })
+      console.log(user)
+    })
+
+  // service related
     app.get('/services' ,async(req,res)=>{
       const cursor =serviceCollection.find();
       const result = await cursor.toArray();
@@ -51,8 +95,12 @@ async function run() {
 
     // bookings
 
-    app.get('/bookings', async(req,res)=>{
+    app.get('/bookings', verifyToken, async(req,res)=>{
       const result=await bookingCollection.find().toArray();
+      console.log('tok tok validtotken', req.user);
+      if(req.query.email !== req.user.email){
+        return res.status(403).send({message:'Forbidden Access'})
+      }
       res.send(result);
       let query={};
       if(req.query?.email){
